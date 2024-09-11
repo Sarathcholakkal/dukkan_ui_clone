@@ -1,16 +1,5 @@
 # ui_clone
 
-A new Flutter project.
+ <img width="320" height="760" src="https://github.com/user-attachments/assets/bd7a43fc-3862-4706-b4d0-cefda6e4fd91" >
+  <img width="320" height="760" src="https://github.com/user-attachments/assets/18dbe0f7-0a53-4815-a861-fae7ee4ee935" >
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
