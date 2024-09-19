@@ -66,8 +66,8 @@ class _AddInfoState extends State<AddInfo> {
                     ),
                     trailing: IconButton(
                       onPressed: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (ctx) => Store()));
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (ctx) => const Store()));
                       },
                       icon: const Icon(Icons.arrow_forward_ios_rounded,
                           size: 25, color: themeColorBlack),

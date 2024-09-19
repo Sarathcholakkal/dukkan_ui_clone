@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ui_clone/addinfo.dart';
-import 'package:ui_clone/store.dart';
 
 void main() {
   runApp(const MyApp());

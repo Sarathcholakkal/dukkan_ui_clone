@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:material_symbols_icons/symbols.dart';
 import 'package:ui_clone/colors.dart';
+import 'package:ui_clone/payments.dart';
 
 class Store extends StatefulWidget {
   const Store({super.key});
@@ -59,10 +60,13 @@ class _StoreState extends State<Store> {
               Card(
                 color: Colors.white,
                 shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
                 child: Container(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -71,9 +75,9 @@ class _StoreState extends State<Store> {
                           Container(
                             height: 45,
                             width: 45,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFFEF7019),
-                              borderRadius: const BorderRadius.all(
+                              borderRadius: BorderRadius.all(
                                 Radius.circular(4),
                               ),
                             ),
@@ -115,7 +119,7 @@ class _StoreState extends State<Store> {
               Card(
                 color: Colors.white,
                 shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -183,7 +187,7 @@ class _StoreState extends State<Store> {
               Card(
                 color: Colors.white,
                 shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -197,7 +201,7 @@ class _StoreState extends State<Store> {
                             width: 45,
                             decoration: const BoxDecoration(
                               color: Color(0xFFF4B252),
-                              borderRadius: const BorderRadius.all(
+                              borderRadius: BorderRadius.all(
                                 Radius.circular(4),
                               ),
                             ),
@@ -239,7 +243,7 @@ class _StoreState extends State<Store> {
               Card(
                 color: Colors.white,
                 shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -251,9 +255,9 @@ class _StoreState extends State<Store> {
                           Container(
                             height: 45,
                             width: 45,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFF18A99B),
-                              borderRadius: const BorderRadius.all(
+                              borderRadius: BorderRadius.all(
                                 Radius.circular(4),
                               ),
                             ),
@@ -295,7 +299,7 @@ class _StoreState extends State<Store> {
               Card(
                 color: Colors.white,
                 shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -358,60 +362,69 @@ class _StoreState extends State<Store> {
                   ),
                 ),
               ),
-              Card(
-                color: Colors.white,
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Stack(
-                        children: [
-                          Container(
-                            height: 45,
-                            width: 45,
-                            decoration: const BoxDecoration(
-                              color: Color(0xFF6F43A5),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(4),
+              GestureDetector(
+                onDoubleTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (ctx) => Payments(),
+                    ),
+                  );
+                },
+                child: Card(
+                  color: Colors.white,
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          children: [
+                            Container(
+                              height: 45,
+                              width: 45,
+                              decoration: const BoxDecoration(
+                                color: Color(0xFF6F43A5),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4),
+                                ),
                               ),
                             ),
+                            const Positioned(
+                              left: 7,
+                              top: 7,
+                              child: Icon(
+                                Icons.payments_outlined,
+                                size: 30,
+                                color: Colors.white,
+                                weight: .5,
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Extra',
+                          style: GoogleFonts.quicksand(
+                            textStyle: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                                height: 1.2),
                           ),
-                          const Positioned(
-                            left: 7,
-                            top: 7,
-                            child: Icon(
-                              Icons.payments_outlined,
-                              size: 30,
-                              color: Colors.white,
-                              weight: .5,
-                            ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        'Extra',
-                        style: GoogleFonts.quicksand(
-                          textStyle: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                              height: 1.2),
                         ),
-                      ),
-                      Text(
-                        'Charges',
-                        style: GoogleFonts.quicksand(
-                          textStyle: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                              height: 1.2),
-                        ),
-                      )
-                    ],
+                        Text(
+                          'Charges',
+                          style: GoogleFonts.quicksand(
+                            textStyle: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                                height: 1.2),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -419,7 +432,7 @@ class _StoreState extends State<Store> {
                 color: Colors.white,
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
-                    Radius.circular(5),
+                    Radius.circular(10),
                   ),
                 ),
                 child: Container(
@@ -459,12 +472,12 @@ class _StoreState extends State<Store> {
                             width: 45,
                             height: 20,
                             alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: const Color(0xFF18A99B),
+                            decoration: const BoxDecoration(
+                              color: Color(0xFF18A99B),
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(3)),
+                                  BorderRadius.all(Radius.circular(10)),
                             ),
-                            child: Text(
+                            child: const Text(
                               'NEW',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 12),
