@@ -4,6 +4,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:material_symbols_icons/symbols.dart';
 import 'package:ui_clone/const/colors.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:ui_clone/premium.dart';
 import 'package:ui_clone/widgets/payouts.dart';
 
 class Payments extends StatelessWidget {
@@ -38,7 +39,13 @@ class Payments extends StatelessWidget {
           backgroundColor: appBarColor,
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (ctx) => const Premium(),
+                  ),
+                );
+              },
               icon: Icon(
                 MdiIcons.alertCircleOutline,
                 color: Colors.white,
