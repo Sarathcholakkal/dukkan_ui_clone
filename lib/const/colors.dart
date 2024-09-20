@@ -8,6 +8,8 @@ const Color dividerColor = Color(0xFFBFBFBF);
 
 const Color arrowColor = Color(0xFF757575);
 
+const Color greenColor = Color(0xFF16B31C);
+
 const IconData logout = IconData(0xe3b3, fontFamily: 'MaterialIcons');
 const IconData messenger_outline =
     IconData(0xe155, fontFamily: 'MaterialIcons');

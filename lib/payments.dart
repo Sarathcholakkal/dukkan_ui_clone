@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:material_symbols_icons/symbols.dart';
-import 'package:ui_clone/colors.dart';
+import 'package:ui_clone/const/colors.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:ui_clone/widgets/payouts.dart';
 
 class Payments extends StatelessWidget {
   const Payments({super.key});
@@ -11,7 +12,7 @@ class Payments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
@@ -52,7 +53,9 @@ class Payments extends StatelessWidget {
                 const EdgeInsets.only(top: 10, left: 15, right: 15, bottom: 5),
             child: Column(
               children: [
-                Expanded(
+                SizedBox(
+                  width: double.infinity,
+                  height: 440,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -93,7 +96,7 @@ class Payments extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(top: 8, bottom: 8),
+                              padding: const EdgeInsets.only(top: 8, bottom: 8),
                               child: LinearPercentIndicator(
                                 lineHeight: 2,
                                 progressColor: appBarColor,
@@ -111,7 +114,7 @@ class Payments extends StatelessWidget {
                                     color: Color.fromARGB(255, 141, 140, 140)),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 4,
                             ),
                             TextButton(
@@ -131,18 +134,19 @@ class Payments extends StatelessWidget {
                         ),
                       ),
                       //!==================end of top container session=================
-                      Flexible(
+                      SizedBox(
                         child: Row(
                           children: [
                             Text(
                               'Default Method',
                               style: GoogleFonts.quicksand(
                                 textStyle: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 13,
-                                    height: 1.2,
-                                    wordSpacing: 2,
-                                    color: Colors.black),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                  height: 1.2,
+                                  wordSpacing: 2,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                             Spacer(),
@@ -163,7 +167,7 @@ class Payments extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Flexible(
+                      SizedBox(
                         child: Row(
                           children: [
                             Text(
@@ -177,7 +181,7 @@ class Payments extends StatelessWidget {
                                     color: Colors.black),
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Text('Bank Account',
                                 style: GoogleFonts.quicksand(
                                   textStyle: const TextStyle(
@@ -196,7 +200,7 @@ class Payments extends StatelessWidget {
                         ),
                       ),
                       //!==================== row session ended ===========
-                      Divider(thickness: 1, color: Color(0xFFBFBFBF)),
+                      const Divider(thickness: 1, color: Color(0xFFBFBFBF)),
                       Flexible(
                         child: Row(
                           children: [
@@ -211,7 +215,7 @@ class Payments extends StatelessWidget {
                                     color: Colors.black),
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Text(
                               'Life Time',
                               style: GoogleFonts.quicksand(
@@ -266,7 +270,7 @@ class Payments extends StatelessWidget {
                             child: Container(
                               width: 180,
                               height: 74,
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   vertical: 8, horizontal: 15),
                               decoration: const BoxDecoration(
                                 color: Color(0xFF16B31C),
@@ -294,7 +298,7 @@ class Payments extends StatelessWidget {
                         ],
                       ),
 
-                      Padding(
+                      const Padding(
                         padding: const EdgeInsets.only(left: 8, right: 10),
                         child: Text(
                           'Transactions',
@@ -310,43 +314,56 @@ class Payments extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 50,
-                  child: AppBar(
-                    bottom: TabBar(
-                      tabs: [
-                        Tab(
-                          icon: Icon(Icons.directions_bike),
-                        ),
-                        Tab(
-                          icon: Icon(
-                            Icons.directions_car,
+                  child: PreferredSize(
+                    preferredSize: const Size.fromHeight(10),
+                    child: AppBar(
+                      backgroundColor: Colors.grey[200],
+                      elevation: 0,
+                      bottom: TabBar(
+                        unselectedLabelColor: Colors.grey,
+                        padding: const EdgeInsets.symmetric(horizontal: 5),
+                        labelColor: Colors.grey[200],
+                        indicatorSize: TabBarIndicatorSize.tab,
+                        dividerColor: Colors.grey[200],
+                        indicator: ShapeDecoration(
+                          color: appBarColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40),
                           ),
                         ),
-                      ],
+                        tabs: const [
+                          Tab(
+                            text: 'on hold',
+                          ),
+                          Tab(
+                            text: 'Payouts(16)',
+                          ),
+                          Tab(
+                            text: 'Refunds',
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
                   child: TabBarView(
                     children: [
-                      // first tab bar view widget
                       Container(
-                        color: Colors.red,
                         child: Center(
                           child: Text(
-                            'Bike',
+                            'on hold',
                           ),
                         ),
                       ),
-
-                      // second tab bar viiew widget
+                      Payouts(),
                       Container(
-                        color: Colors.pink,
                         child: Center(
                           child: Text(
-                            'Car',
+                            'Refunds',
                           ),
                         ),
-                      ),
+                      )
                     ],
                   ),
                 )
