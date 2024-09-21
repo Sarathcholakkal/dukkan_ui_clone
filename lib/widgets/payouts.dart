@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_clone/const/collection.dart';
 import 'package:ui_clone/const/colors.dart';
+import 'package:ui_clone/widgets/sucess_indicator.dart';
 
 class Payouts extends StatelessWidget {
   const Payouts({super.key});
@@ -66,14 +67,7 @@ class Payouts extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Container(
-                                  height: 12,
-                                  width: 12,
-                                  decoration: BoxDecoration(
-                                    color: greenColor,
-                                    borderRadius: BorderRadius.circular(50),
-                                  ),
-                                ),
+                                SucessIndicator(),
                                 const SizedBox(
                                   width: 10,
                                 ),

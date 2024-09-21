@@ -63,3 +63,16 @@ List<String> imageList = [
   'asset/image/tshirt9.png',
   'asset/image/tshirt10.png',
 ];
+
+List<String> tittleList = [
+  'Couch Potato | Woman in the ',
+  'Couch Potato | Men in the ',
+  'Combo Blahst 2 | Ecplore bla',
+  'Mug | Explore in the ',
+  'I see combo pack ',
+  'Couch Potato | Woman in the ',
+  'Couch Potato | Men in the ',
+  'Combo Blahst 2 | Ecplore bla',
+  'Mug | Explore in the ',
+  'Couch Potato | Woman in the ',
+];
