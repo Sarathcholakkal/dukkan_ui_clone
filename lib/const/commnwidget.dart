@@ -5,7 +5,7 @@ const Widget horizondalDivider1 = Divider(
   thickness: .5,
   color: Color.fromARGB(255, 141, 138, 138),
 );
-const sizedBox130 = const SizedBox(
+const sizedBox130 = SizedBox(
   height: 130,
 );
 

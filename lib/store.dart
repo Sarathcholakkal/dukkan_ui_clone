@@ -366,7 +366,7 @@ class _StoreState extends State<Store> {
                 onDoubleTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (ctx) => Payments(),
+                      builder: (ctx) => const Payments(),
                     ),
                   );
                 },

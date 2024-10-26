@@ -21,9 +21,10 @@ class _AddInfoState extends State<AddInfo> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(Symbols.arrow_left_alt_rounded,
-                size: 40, color: Colors.white)),
+          onPressed: () {},
+          icon: const Icon(Symbols.arrow_left_alt_rounded,
+              size: 40, color: Colors.white),
+        ),
         bottom: const PreferredSize(
           preferredSize: Size.fromHeight(5),
           child: SizedBox(),
@@ -67,7 +68,10 @@ class _AddInfoState extends State<AddInfo> {
                     trailing: IconButton(
                       onPressed: () {
                         Navigator.of(context).push(
-                            MaterialPageRoute(builder: (ctx) => const Store()));
+                          MaterialPageRoute(
+                            builder: (ctx) => const Store(),
+                          ),
+                        );
                       },
                       icon: const Icon(Icons.arrow_forward_ios_rounded,
                           size: 25, color: themeColorBlack),
@@ -81,14 +85,15 @@ class _AddInfoState extends State<AddInfo> {
                           size: 30,
                         ),
                         Positioned(
-                            bottom: 8,
-                            right: 11,
-                            child: Text(
-                              'A',
-                              style: TextStyle(
-                                fontSize: 12,
-                              ),
-                            ))
+                          bottom: 8,
+                          right: 11,
+                          child: Text(
+                            'A',
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                          ),
+                        )
                       ],
                     ),
                     title: Text(

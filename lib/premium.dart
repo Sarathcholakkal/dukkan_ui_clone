@@ -25,7 +25,8 @@ class _PremiumState extends State<Premium> {
   void initState() {
     final videoID = YoutubePlayer.convertUrlToId(videoURL);
     _controller = YoutubePlayerController(
-        initialVideoId: videoID!, flags: YoutubePlayerFlags(autoPlay: false));
+        initialVideoId: videoID!,
+        flags: const YoutubePlayerFlags(autoPlay: false));
     super.initState();
   }
 
@@ -88,7 +89,7 @@ class _PremiumState extends State<Premium> {
                               horizondalDivider1,
                               buildGetinTouch(),
                               horizondalDivider1,
-                              Container(
+                              SizedBox(
                                 height: 80,
                                 width: double.infinity,
                                 child: SizedBox(
@@ -123,7 +124,7 @@ class _PremiumState extends State<Premium> {
                                           Navigator.of(context).push(
                                             MaterialPageRoute(
                                               builder: (ctx) {
-                                                return Order();
+                                                return const Order();
                                               },
                                             ),
                                           );
@@ -177,7 +178,7 @@ class _PremiumState extends State<Premium> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           buildFreQuestions('Need help? Get in touch'),
-          Container(
+          SizedBox(
             height: 100,
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -303,7 +304,7 @@ class GetinTouchWidget extends StatelessWidget {
           Icon(icons),
           Text(
             text,
-            style: TextStyle(fontSize: 15),
+            style: const TextStyle(fontSize: 15),
           )
         ],
       ),

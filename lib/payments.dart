@@ -156,7 +156,7 @@ class Payments extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Text('Online Payments',
                                 style: GoogleFonts.quicksand(
                                   textStyle: const TextStyle(
@@ -306,7 +306,7 @@ class Payments extends StatelessWidget {
                       ),
 
                       const Padding(
-                        padding: const EdgeInsets.only(left: 8, right: 10),
+                        padding: EdgeInsets.only(left: 8, right: 10),
                         child: Text(
                           'Transactions',
                           style: TextStyle(
@@ -357,15 +357,15 @@ class Payments extends StatelessWidget {
                   child: TabBarView(
                     children: [
                       Container(
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'on hold',
                           ),
                         ),
                       ),
-                      Payouts(),
+                      const Payouts(),
                       Container(
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Refunds',
                           ),

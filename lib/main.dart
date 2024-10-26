@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ui_clone/addinfo.dart';
-import 'package:ui_clone/catelog.dart';
-import 'package:ui_clone/order.dart';
-import 'package:ui_clone/premium.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,8 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Catelog(),
-      // const AddInfo(),
+      home: const AddInfo(),
     );
   }
 }

@@ -67,7 +67,7 @@ class Payouts extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                SucessIndicator(),
+                                const SucessIndicator(),
                                 const SizedBox(
                                   width: 10,
                                 ),
